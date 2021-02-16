@@ -17,6 +17,18 @@ For these instructions, I'll list out the steps to build Trident2020.
 - Grab the [library](library.md) files from the last step (BallySternOS.cpp, BallySternOS.h, SelfTestAndAudit.cpp, and SelfTestAndAudit.h) and put those in your folder (Example: \Pinball\Trident2020\BallySternOS.cpp, etc.)  
 - Open the ".ino" file in your Arduino IDE (Example: Trident2020.ino)  
   
+Using Trident2020 as an example, your Trident2020 folder should now contain these files:  
+- BallySternOS.cpp  
+- BallySternOS.h  
+- BSOS_Config.h  
+- SelfTestAndAudit.cpp  
+- SelfTestAndAudit.h  
+- SendOnlyWavTrigger.cpp (only for some games)    
+- SendOnlyWavTrigger.h (only for some games)    
+- Trident2020.h  
+- Trident2020.ino  
+If you're missing any of those files, please refer to the documentation on getting the [library](library.md). Note: some implementations don't use "SendOnlyWavTrigger" files.  
+    
   
 ### Notes  
 At this point, you have everything you need to [build](compile.md) out the game software for you machine, but you may want to configure some options first.  
