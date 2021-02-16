@@ -17,3 +17,24 @@ For these instructions, I'll list out the steps to build Trident2020.
 - Grab the [library](library.md) files from the last step (BallySternOS.cpp, BallySternOS.h, SelfTestAndAudit.cpp, and SelfTestAndAudit.h) and put those in your folder (Example: \Pinball\Trident2020\BallySternOS.cpp, etc.)  
 - Open the ".ino" file in your Arduino IDE (Example: Trident2020.ino)  
   
+  
+### Notes  
+At this point, you have everything you need to [build](compile.md) out the game software for you machine, but you may want to configure some options first.  
+For each implementation, I use a BSOS_Config.h for library-specific configurations, and some custom flags at the top of the ".ino" file.  
+I always try to keep the files on GitHub compatible with a stock machine. If you have non-standard hardware or you want to use a Wav Trigger for digital sound, read on.  
+  
+#### BSOS_Config.h  
+Most of the defines in this file are set based on the capabilities of a standard example of that machine. For example, some machines have 7-digit displays, and they require the "BALLY_STERN_OS_USE_7_DIGIT_DISPLAYS" definition to be on. If one of those capabilities is needed, the line will be uncommented in the code (i.e. the line will NOT begin with "//").  
+A couple of hardware options may need to be tweaked depending on your setup:  
+- "BSOS_SLOW_DOWN_LAMP_STROBE" - if you find that your lamps are flickering, you might uncomment this define and see if that helps.  
+- "BSOS_NUM_SWITCH_LOOPS" and "BSOS_NUM_LAMP_LOOPS" - these values are set to work with the original MPU. If you have an Alltek MPU, you might need to increase these numbers to account for the faster hardware. If you experience issues with the switches showing noise or the lamps flickering, increase each of these values, 5% at a time, to see if you can correct the problem.  
+  
+#### Defines at the top of the ".ino" file  
+Other game options may be specified at the top of the program file (Exmaple: Trident2020.ino)  
+For the sound of Trident2020, the operator can compile to use the original SB100 board for sound, or use a Wav Trigger board for digital sound. To compile for the SB100, the define is in BSOS_Config.h. To use the Wav Trigger, turn off the SB100 define in the BSOS_Config and use one of the following values in Trident2020.ino  
+- //#define USE_WAV_TRIGGER  
+or  
+- //#define USE_WAV_TRIGGER_1p3  
+by uncommenting the correct line.   
+  
+
