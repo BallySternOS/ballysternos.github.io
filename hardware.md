@@ -8,7 +8,7 @@ The board will look like this:
 (the header to plug into J5 is on the back of this board)  
   
 To construct this board, make the following connections:
-![Image](https://user-images.githubusercontent.com/36781010/95590787-7d22fa00-0a14-11eb-9a51-c4803598649c.png)
+![Image](https://github.com/BallySternOS/BallySternOS/blob/master/images/Wiring%20rev5.png?raw=true)
   
 The jumper (alligator clip) will be clipped to the top lead of R134 on the MPU board so the Arduino can sense the interrupt line.  
 ### Parts list:
