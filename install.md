@@ -17,4 +17,8 @@ In the case of the SB-300, the card may produce errant noise when new code is ru
 ![Image](https://github.com/BallySternOS/BallySternOS/blob/master/images/IMG_2574.jpeg?raw=true)  
   
 In this photo, I've pulled the Green/White wire from the SB-300's J3:Pin 9, and attached it with a yellow jumper to a switch. The switch then returns the speaker signal via the green wire back up to the J3 connector. When the switch is flipped to old code, the speaker is connected. Switching to new code disconnects the internal speak and eliminates unwanted noise. This method allows this modification to be removed very easily.  
-
+  
+On some machines, the boot switch can be mounted in the air grate on the under side of the head (Meteor is pictured below). On other machines, or if the operator doesn't want the player to have access to the boot switch, it can be mounted behind the coin door.  
+![Image](https://github.com/BallySternOS/BallySternOS/blob/master/images/IMG_2577.jpeg?raw=true)  
+  
+  
